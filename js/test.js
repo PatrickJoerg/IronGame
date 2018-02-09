@@ -63,21 +63,6 @@ function Block(x,y){
                 (this.y < item.y + item.height) &&
                 (this.y + this.height > item.y);
       }
-      this.reenter = function(){
-        if (this.x == 608){
-            this.x = -20;
-        }
-        else if (this.x == -20){
-            this.x = 608
-        }
-        else if (this.y == 608){
-            this.y = -20
-        }
-        else if (this.y == -20){
-            this.y = 608
-        }
-        
-    }
 }
 
     
@@ -168,7 +153,21 @@ function moveSnake(){
         snake[0].x+=10;
         break;
            }
-           
+           this.reenter = function(){
+            if (this.x == 608){
+                this.x = -20;
+            }
+            else if (this.x == -20){
+                this.x = 608
+            }
+            else if (this.y == 608){
+                this.y = -20
+            }
+            else if (this.y == -20){
+                this.y = 608
+            }
+            
+        }
     
   }
 
